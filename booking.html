@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DDTT Booking Page</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/output.css">
+
+<style>
+
+body{
+scroll-behavior:smooth;
+}
+
+.input-field{
+transition:.3s;
+}
+
+.input-field:focus{
+transform:translateY(-2px);
+}
+
+.summary-card{
+position:sticky;
+top:100px;
+}
+
+.faq-content{
+max-height:0;
+overflow:hidden;
+transition:max-height .4s ease;
+}
+
+.faq.active .faq-content{
+max-height:200px;
+}
+
+</style>
+
+</head>
+
+<body class="bg-[#F5E6CA]">
+
+<!-- HERO SECTION -->
+
+<section
+class="relative h-[70vh] bg-cover bg-center"
+style="background-image:url('./images/Airplane\ 2.jpg')">
+
+<div class="absolute inset-0 bg-black/60"></div>
+
+<div class="relative z-10 h-full flex flex-col justify-center items-center text-center text-white px-6">
+
+<div class="mb-5">
+<h2 class="text-2xl font-bold">
+🌍 Dream Destination Travel & Tours
+</h2>
+</div>
+
+<h1 class="text-5xl md:text-7xl font-bold mb-6">
+Book Your Dream Getaway Today
+</h1>
+
+<p class="max-w-3xl text-lg md:text-xl">
+Discover breathtaking destinations, luxury vacations,
+family adventures, and unforgettable experiences around the world.
+</p>
+
+</div>
+
+</section>
+
+<!-- BOOKING SECTION -->
+
+<section class="py-20">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="grid lg:grid-cols-3 gap-10">
+
+<!-- BOOKING FORM -->
+
+<div class="lg:col-span-2">
+
+<div class="bg-white rounded-3xl shadow-xl p-8">
+
+<h2 class="text-4xl font-bold text-sky-700 mb-8">
+Travel Booking Form
+</h2>
+
+<form class="space-y-6">
+
+<!-- Destination -->
+
+<div>
+<label class="font-semibold">Destination</label>
+
+<select class="input-field w-full border p-4 rounded-xl mt-2">
+<option>Bali</option>
+<option>Dubai</option>
+<option>Paris</option>
+<option>Maldives</option>
+<option>Santorini</option>
+<option>Cape Town</option>
+</select>
+</div>
+
+<!-- Trip Type -->
+
+<div>
+<label class="font-semibold">Trip Type</label>
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
+
+<label><input type="radio" name="trip"> Solo</label>
+<label><input type="radio" name="trip"> Couple</label>
+<label><input type="radio" name="trip"> Family</label>
+<label><input type="radio" name="trip"> Group</label>
+
+</div>
+</div>
+
+<!-- Dates -->
+
+<div class="grid md:grid-cols-2 gap-5">
+
+<div>
+<label>Check-In</label>
+<input type="date"
+class="input-field w-full border p-4 rounded-xl mt-2">
+</div>
+
+<div>
+<label>Check-Out</label>
+<input type="date"
+class="input-field w-full border p-4 rounded-xl mt-2">
+</div>
+
+</div>
+
+<!-- Travelers -->
+
+<div class="grid md:grid-cols-2 gap-5">
+
+<div>
+<label>Adults</label>
+<input type="number" value="1"
+class="input-field w-full border p-4 rounded-xl mt-2">
+</div>
+
+<div>
+<label>Children</label>
+<input type="number" value="0"
+class="input-field w-full border p-4 rounded-xl mt-2">
+</div>
+
+</div>
+
+<!-- Package -->
+
+<div>
+
+<label class="font-semibold">
+Select Package
+</label>
+
+<div class="grid md:grid-cols-3 gap-5 mt-4">
+
+<div class="border rounded-xl p-5 hover:border-orange-500 cursor-pointer">
+<h3 class="font-bold">Basic</h3>
+<p class="text-orange-500">$500</p>
+</div>
+
+<div class="border rounded-xl p-5 hover:border-orange-500 cursor-pointer">
+<h3 class="font-bold">Standard</h3>
+<p class="text-orange-500">$1,000</p>
+</div>
+
+<div class="border rounded-xl p-5 hover:border-orange-500 cursor-pointer">
+<h3 class="font-bold">Premium</h3>
+<p class="text-orange-500">$2,000</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- Extras -->
+
+<div>
+
+<label class="font-semibold">
+Add-ons
+</label>
+
+<div class="grid md:grid-cols-2 gap-4 mt-3">
+
+<label><input type="checkbox"> Airport Pickup (+$50)</label>
+
+<label><input type="checkbox"> Travel Insurance (+$100)</label>
+
+<label><input type="checkbox"> Tour Guide (+$150)</label>
+
+<label><input type="checkbox"> Hotel Upgrade (+$300)</label>
+
+</div>
+
+</div>
+
+<!-- Traveler Info -->
+
+<div class="grid md:grid-cols-2 gap-5">
+
+<input type="text"
+placeholder="Full Name"
+class="input-field border p-4 rounded-xl">
+
+<input type="email"
+placeholder="Email Address"
+class="input-field border p-4 rounded-xl">
+
+</div>
+
+<input type="tel"
+placeholder="Phone Number"
+class="input-field border p-4 rounded-xl w-full">
+
+<textarea rows="5"
+placeholder="Special Requests"
+class="input-field border p-4 rounded-xl w-full"></textarea>
+
+<!-- Payment -->
+
+<div>
+
+<h3 class="text-xl font-bold mb-4">
+Payment Method
+</h3>
+
+<div class="grid md:grid-cols-3 gap-4">
+
+<label class="border p-4 rounded-xl">
+<input type="radio" name="payment">
+💳 Credit Card
+</label>
+
+<label class="border p-4 rounded-xl">
+<input type="radio" name="payment">
+🅿️ PayPal
+</label>
+
+<label class="border p-4 rounded-xl">
+<input type="radio" name="payment">
+🏦 Bank Transfer
+</label>
+
+</div>
+
+</div>
+
+<button
+class="bg-orange-500 hover:bg-orange-600 hover:scale-105 transition text-white px-8 py-4 rounded-xl w-full font-bold">
+
+Confirm Booking
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<!-- PRICE SUMMARY -->
+
+<div>
+
+<div class="summary-card bg-white rounded-3xl shadow-xl p-8">
+
+<h3 class="text-3xl font-bold text-sky-700 mb-6">
+Booking Summary
+</h3>
+
+<div class="space-y-4">
+
+<div class="flex justify-between">
+<span>Package</span>
+<span>$1000</span>
+</div>
+
+<div class="flex justify-between">
+<span>Travelers</span>
+<span>2</span>
+</div>
+
+<div class="flex justify-between">
+<span>Add-ons</span>
+<span>$150</span>
+</div>
+
+<div class="flex justify-between">
+<span>Taxes</span>
+<span>$57</span>
+</div>
+
+<hr>
+
+<div class="flex justify-between text-2xl font-bold">
+<span>Total</span>
+<span>$1,207</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TRUST BADGES -->
+
+<section class="py-16 bg-white">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="grid md:grid-cols-4 gap-8">
+
+<div class="text-center">
+<i class="fas fa-lock text-5xl text-sky-600"></i>
+<h3 class="font-bold mt-4">Secure Payment</h3>
+</div>
+
+<div class="text-center">
+<i class="fas fa-tag text-5xl text-orange-500"></i>
+<h3 class="font-bold mt-4">Best Price Guarantee</h3>
+</div>
+
+<div class="text-center">
+<i class="fas fa-headset text-5xl text-sky-600"></i>
+<h3 class="font-bold mt-4">24/7 Support</h3>
+</div>
+
+<div class="text-center">
+<i class="fas fa-plane-departure text-5xl text-orange-500"></i>
+<h3 class="font-bold mt-4">Free Cancellation</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT INFO -->
+
+<section class="py-20">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="grid md:grid-cols-4 gap-6">
+
+<div class="bg-white p-6 rounded-xl shadow">
+📍 Victoria Island, Lagos
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow">
+📞 +234 800 123 4567
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow">
+✉ info@ddtttravels.com
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow">
+🕒 Mon - Sat 8am - 6pm
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MAP -->
+
+<section>
+
+<iframe
+src="https://maps.google.com/maps?q=Victoria%20Island%20Lagos&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="450"
+style="border:0;">
+</iframe>
+
+</section>
+
+<!-- FAQ -->
+
+<section class="py-20 bg-white">
+
+<div class="max-w-4xl mx-auto px-6">
+
+<h2 class="text-4xl font-bold text-center mb-10">
+Frequently Asked Questions
+</h2>
+
+<div class="space-y-4">
+
+<div class="faq border rounded-xl">
+<button class="faq-btn w-full p-5 text-left font-semibold">
+How does booking work?
+</button>
+
+<div class="faq-content px-5 pb-5">
+Choose a package, fill out your details, and submit your booking request.
+</div>
+</div>
+
+<div class="faq border rounded-xl">
+<button class="faq-btn w-full p-5 text-left font-semibold">
+What payment methods are accepted?
+</button>
+
+<div class="faq-content px-5 pb-5">
+Credit Card, PayPal and Bank Transfer.
+</div>
+</div>
+
+<div class="faq border rounded-xl">
+<button class="faq-btn w-full p-5 text-left font-semibold">
+What is the cancellation policy?
+</button>
+
+<div class="faq-content px-5 pb-5">
+Free cancellation applies to selected packages.
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="bg-slate-900 text-white py-16">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="grid md:grid-cols-4 gap-10">
+
+<div>
+<h3 class="text-2xl font-bold">
+DDTT
+</h3>
+
+<p class="mt-3 text-gray-400">
+Your trusted travel companion.
+</p>
+</div>
+
+<div>
+<h4 class="font-bold mb-3">Contacts</h4>
+<p>+234 800 123 4567</p>
+<p>info@ddtttravels.com</p>
+</div>
+
+<div class="flex flex-col gap-2">
+<h4 class="font-bold mb-3">Quick Links</h4>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="booking.html">Booking</a>
+<a href="blog.html">Blog</a>
+<a href="packages.html">Packages</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<div>
+<h4 class="font-bold mb-3">Follow Us</h4>
+
+<div class="flex gap-4 text-2xl">
+
+<i class="fab fa-instagram hover:text-pink-500"></i>
+
+<i class="fab fa-facebook hover:text-blue-500"></i>
+
+<i class="fab fa-twitter hover:text-sky-500"></i>
+
+<i class="fab fa-whatsapp hover:text-green-500"></i>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+<script>
+document.querySelectorAll(".faq-btn").forEach(btn=>{
+btn.addEventListener("click",()=>{
+btn.parentElement.classList.toggle("active");
+});
+});
+</script>
+
+</body>
+</html>
+```

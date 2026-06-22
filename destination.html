@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DDTT - Explore Our Top Destinations</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<link rel="stylesheet" href="css/output.css">
+
+<style>
+html{
+    scroll-behavior:smooth;
+}
+
+.destination-card{
+    transition:all .4s ease;
+}
+
+.destination-card:hover{
+    transform:translateY(-8px);
+}
+
+.destination-card img{
+    transition:transform .5s ease;
+}
+
+.destination-card:hover img{
+    transform:scale(1.1);
+}
+
+.fade-in{
+    animation:fadeIn .8s ease forwards;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.carousel{
+    scroll-behavior:smooth;
+}
+
+.filter-control{
+    transition:all .3s ease;
+}
+
+.filter-control:hover{
+    border-color:#F97316;
+}
+
+.load-btn:hover{
+    transform:scale(1.05);
+}
+</style>
+
+</head>
+
+<body class="bg-[#F5E6CA] text-gray-800">
+
+
+
+<!-- ================= HERO ================= -->
+
+<section
+class="relative h-[80vh] bg-cover bg-center"
+style="background-image:url('./images/Airplane\ 2.jpg');">
+
+<div class="absolute inset-0 bg-black/55"></div>
+
+<div class="relative z-10 flex flex-col justify-center items-center h-full text-center text-white px-6">
+
+<h1 class="text-5xl md:text-7xl font-bold mb-6">
+Explore Our Top Destinations
+</h1>
+
+<p class="text-lg md:text-2xl max-w-3xl">
+Discover breathtaking beaches, cultural treasures,
+luxury escapes, and unforgettable adventures around the globe.
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= FEATURED DESTINATIONS ================= -->
+
+<section class="py-20 bg-white">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="text-center mb-12">
+
+<h2 class="text-4xl font-bold text-sky-700">
+Featured Destinations
+</h2>
+
+<p class="text-gray-600 mt-4">
+Handpicked destinations loved by our travelers.
+</p>
+
+</div>
+
+<div class="carousel flex overflow-x-auto gap-6 pb-4">
+
+<!-- CARD 1 -->
+
+<div class="min-w-[320px] bg-white rounded-3xl overflow-hidden shadow-lg">
+
+<img
+src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd"
+class="h-60 w-full object-cover">
+
+<div class="p-6">
+
+<h3 class="text-2xl font-bold">
+Maldives
+</h3>
+
+<p class="text-gray-600">
+Luxury island paradise.
+</p>
+
+</div>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="min-w-[320px] bg-white rounded-3xl overflow-hidden shadow-lg">
+
+<img
+src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34"
+class="h-60 w-full object-cover">
+
+<div class="p-6">
+
+<h3 class="text-2xl font-bold">
+Paris
+</h3>
+
+<p class="text-gray-600">
+City of Love and Culture.
+</p>
+
+</div>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="min-w-[320px] bg-white rounded-3xl overflow-hidden shadow-lg">
+
+<img
+src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c"
+class="h-60 w-full object-cover">
+
+<div class="p-6">
+
+<h3 class="text-2xl font-bold">
+Dubai
+</h3>
+
+<p class="text-gray-600">
+Luxury and modern marvels.
+</p>
+
+</div>
+
+</div>
+
+<!-- CARD 4 -->
+
+<div class="min-w-[320px] bg-white rounded-3xl overflow-hidden shadow-lg">
+
+<img
+src="https://images.unsplash.com/photo-1528127269322-539801943592"
+class="h-60 w-full object-cover">
+
+<div class="p-6">
+
+<h3 class="text-2xl font-bold">
+Bali
+</h3>
+
+<p class="text-gray-600">
+Tropical paradise and culture.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!--  FILTERS  -->
+
+<section class="py-12">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="bg-white rounded-3xl shadow-xl p-6">
+
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+<select class="filter-control border rounded-xl p-4">
+<option>Region</option>
+<option>Africa</option>
+<option>Asia</option>
+<option>Europe</option>
+<option>Americas</option>
+</select>
+
+<select class="filter-control border rounded-xl p-4">
+<option>Trip Type</option>
+<option>Beach</option>
+<option>Adventure</option>
+<option>City</option>
+<option>Honeymoon</option>
+<option>Cultural</option>
+<option>Wildlife</option>
+</select>
+
+<select class="filter-control border rounded-xl p-4">
+<option>Price Range</option>
+<option>$0 - $500</option>
+<option>$500 - $1000</option>
+<option>$1000 - $2000</option>
+<option>$2000+</option>
+</select>
+
+<select class="filter-control border rounded-xl p-4">
+<option>Sort By</option>
+<option>Popularity</option>
+<option>Price Low-High</option>
+<option>Price High-Low</option>
+</select>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!--  DESTINATIONS GRID  -->
+
+<section class="pb-20">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+
+<!-- DESTINATION CARD -->
+
+<div class="destination-card fade-in bg-white rounded-3xl overflow-hidden shadow-lg">
+
+<div class="overflow-hidden">
+
+<img
+src="https://images.unsplash.com/photo-1527631746610-bca00a040d60"
+class="h-60 w-full object-cover">
+
+</div>
+
+<div class="p-6">
+
+<h3 class="text-2xl font-bold">
+Santorini, Greece
+</h3>
+
+<p class="text-gray-600 mt-2">
+Whitewashed villages overlooking the Aegean Sea.
+</p>
+
+<div class="flex justify-between mt-4 text-sm">
+
+<span class="text-orange-500 font-bold">
+From $899
+</span>
+
+<span>
+7 Days / 6 Nights
+</span>
+
+</div>
+
+<div class="flex items-center gap-2 mt-4 text-yellow-500">
+
+★★★★★
+
+<span class="text-gray-600">
+4.9
+</span>
+
+</div>
+
+<div class="flex gap-3 mt-6">
+
+<button class="bg-sky-600 hover:bg-sky-700 text-white px-4 py-2 rounded-lg">
+View Details
+</button>
+
+<a href="booking.html" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg"> Book Now</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="destination-card fade-in bg-white rounded-3xl overflow-hidden shadow-lg">
+
+<div class="overflow-hidden">
+
+<img
+src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c"
+class="h-60 w-full object-cover">
+
+</div>
+
+<div class="p-6">
+
+<h3 class="text-2xl font-bold">
+Dubai, UAE
+</h3>
+
+<p class="text-gray-600 mt-2">
+Luxury shopping, skyscrapers, and desert adventures.
+</p>
+
+<div class="flex justify-between mt-4">
+
+<span class="text-orange-500 font-bold">
+From $799
+</span>
+
+<span>5 Days / 4 Nights</span>
+
+</div>
+
+<div class="mt-4 text-yellow-500">
+★★★★★ <span class="text-gray-600">4.8</span>
+</div>
+
+<div class="flex gap-3 mt-6">
+
+<button class="bg-sky-600 text-white px-4 py-2 rounded-lg">
+View Details
+
+<a href="booking.html" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg"> Book Now</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="destination-card fade-in bg-white rounded-3xl overflow-hidden shadow-lg">
+
+<div class="overflow-hidden">
+
+<img
+src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34"
+class="h-60 w-full object-cover">
+
+</div>
+
+<div class="p-6">
+
+<h3 class="text-2xl font-bold">
+Paris, France
+</h3>
+
+<p class="text-gray-600 mt-2">
+Romance, culture, and iconic landmarks.
+</p>
+
+<div class="flex justify-between mt-4">
+
+<span class="text-orange-500 font-bold">
+From $999
+</span>
+
+<span>6 Days / 5 Nights</span>
+
+</div>
+
+<div class="mt-4 text-yellow-500">
+★★★★★ <span class="text-gray-600">4.9</span>
+</div>
+
+<div class="flex gap-3 mt-6">
+
+<button class="bg-sky-600 text-white px-4 py-2 rounded-lg">
+View Details
+
+<a href="booking.html" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg"> Book Now</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CARD 4 -->
+
+<div class="destination-card fade-in bg-white rounded-3xl overflow-hidden shadow-lg">
+
+<div class="overflow-hidden">
+
+<img
+src="https://images.unsplash.com/photo-1528127269322-539801943592"
+class="h-60 w-full object-cover">
+
+</div>
+
+<div class="p-6">
+
+<h3 class="text-2xl font-bold">
+Bali, Indonesia
+</h3>
+
+<p class="text-gray-600 mt-2">
+Tropical beaches, temples, and luxury resorts.
+</p>
+
+<div class="flex justify-between mt-4">
+
+<span class="text-orange-500 font-bold">
+From $699
+</span>
+
+<span>5 Days / 4 Nights</span>
+
+</div>
+
+<div class="mt-4 text-yellow-500">
+★★★★★ <span class="text-gray-600">4.7</span>
+</div>
+
+<div class="flex gap-3 mt-6">
+
+<button class="bg-sky-600 text-white px-4 py-2 rounded-lg">
+View Details
+</button>
+
+<a href="booking.html" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg"> Book Now</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- LOAD MORE -->
+
+<div class="text-center mt-16">
+
+<button
+class="load-btn bg-orange-500 hover:bg-orange-600 transition text-white px-10 py-4 rounded-xl font-semibold">
+
+Load More Destinations
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+
+<section class="py-20 bg-sky-700 text-white">
+
+<div class="max-w-5xl mx-auto text-center px-6">
+
+<h2 class="text-4xl md:text-5xl font-bold mb-6">
+Can't Find Your Dream Destination?
+</h2>
+
+<p class="text-xl mb-8">
+Let our travel experts create a fully customized itinerary
+tailored to your preferences and budget.
+</p>
+
+<div class="flex flex-col md:flex-row justify-center gap-4">
+
+<a href="contact.html"
+class="bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-xl font-semibold">
+
+Contact Us
+
+</a>
+
+<a href="booking.html"
+class="bg-white text-sky-700 hover:bg-gray-100 px-8 py-4 rounded-xl font-semibold">
+
+Book Custom Trip
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-slate-900 text-white py-16">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="grid md:grid-cols-4 gap-10">
+
+<div>
+
+<h3 class="text-2xl font-bold">
+DDTT
+</h3>
+
+<p class="text-gray-400 mt-4">
+Creating unforgettable journeys across the globe.
+</p>
+
+</div>
+
+<div>
+
+<h4 class="font-bold mb-4">
+Quick Links
+</h4>
+
+<ul class="space-y-2 text-gray-400">
+<li><a href="index.html">Home</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="booking.html">Booking</a></li>
+<li><a href="about.html">About-us</a></li>
+<li><a href="blog.html">Blog</a></li>
+</ul>
+
+</div>
+
+<div>
+
+<h4 class="font-bold mb-4">
+Contact
+</h4>
+
+<p>📍 Victoria Island, Lagos</p>
+<p>📞 +234 800 123 4567</p>
+<p>✉ info@ddtttravels.com</p>
+
+</div>
+
+<div>
+
+<h4 class="font-bold mb-4">
+Follow Us
+</h4>
+
+<div class="flex gap-5 text-2xl">
+
+<i class="fab fa-instagram hover:text-pink-500"></i>
+<i class="fab fa-facebook hover:text-blue-500"></i>
+<i class="fab fa-twitter hover:text-sky-500"></i>
+<i class="fab fa-whatsapp hover:text-green-500"></i>
+
+</div>
+
+</div>
+
+</div>
+
+<hr class="border-gray-700 my-8">
+
+<div class="text-center text-gray-400">
+© 2026 Dream Destination Travel & Tours (DDTT). All Rights Reserved.
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
+```

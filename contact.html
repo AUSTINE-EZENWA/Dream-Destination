@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Dream Destination Travel and Tours</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<link rel="stylesheet" href="css/output.css">
+
+<style>
+html{
+    scroll-behavior:smooth;
+}
+
+.form-input{
+    transition:all .3s ease;
+}
+
+.form-input:focus{
+    transform:translateY(-2px);
+}
+
+.faq-content{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+}
+
+.faq-item.active .faq-content{
+    max-height:200px;
+}
+</style>
+</head>
+
+<body class="bg-gray-50">
+
+
+
+<!-- ================= HERO ================= -->
+
+<section
+class="relative h-[70vh] bg-cover bg-center flex items-center justify-center"
+style="background-image:url('images/Airplane\ 2.jpg');">
+
+<div class="absolute inset-0 bg-black/55"></div>
+
+<div class="relative z-10 text-center text-white px-6 max-w-4xl">
+
+<h1 class="text-5xl md:text-7xl font-bold mb-6">
+About Dream Destination Travel and Tours
+</h1>
+
+<p class="text-lg md:text-2xl">
+We are here to help you plan your dream adventure.
+</p>
+<p class="text-lg md:text-2xl">
+Whether you're dreaming of tropical beaches, cultural escapes,
+luxury vacations, or unforgettable family trips,
+our travel experts are ready to help.
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT SECTION ================= -->
+
+<section class="py-20 bg-gradient-to-b from-blue-50 to-orange-50">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="grid lg:grid-cols-2 gap-12">
+
+<!-- CONTACT FORM -->
+
+<div class="bg-white rounded-3xl shadow-xl p-8">
+
+<h2 class="text-4xl font-bold text-blue-900 mb-8">
+Send Us a Message
+</h2>
+
+<form class="space-y-5">
+
+<div>
+<label class="font-medium">Full Name</label>
+<input type="text"
+class="form-input w-full border border-gray-300 rounded-lg p-4 focus:ring-2 focus:ring-blue-500 outline-none">
+</div>
+
+<div class="grid md:grid-cols-2 gap-4">
+
+<div>
+<label class="font-medium">Email</label>
+<input type="email"
+class="form-input w-full border border-gray-300 rounded-lg p-4 focus:ring-2 focus:ring-blue-500 outline-none">
+</div>
+
+<div>
+<label class="font-medium">Phone Number</label>
+<input type="tel"
+class="form-input w-full border border-gray-300 rounded-lg p-4 focus:ring-2 focus:ring-blue-500 outline-none">
+</div>
+
+</div>
+
+<div>
+<label class="font-medium">Destination of Interest</label>
+
+<select
+class="form-input w-full border border-gray-300 rounded-lg p-4 focus:ring-2 focus:ring-blue-500 outline-none">
+
+<option>Select Destination</option>
+<option>Paris, France</option>
+<option>Santorini, Greece</option>
+<option>Dubai, UAE</option>
+<option>Bali, Indonesia</option>
+<option>Maldives</option>
+<option>Cape Town, South Africa</option>
+
+</select>
+
+</div>
+
+<div class="grid md:grid-cols-2 gap-4">
+
+<div>
+<label class="font-medium">Travel Dates</label>
+<input type="date"
+class="form-input w-full border border-gray-300 rounded-lg p-4 focus:ring-2 focus:ring-blue-500 outline-none">
+</div>
+
+<div>
+<label class="font-medium">Number of Travelers</label>
+<input type="number"
+class="form-input w-full border border-gray-300 rounded-lg p-4 focus:ring-2 focus:ring-blue-500 outline-none">
+</div>
+
+</div>
+
+<div>
+<label class="font-medium">Message</label>
+
+<textarea rows="5"
+class="form-input w-full border border-gray-300 rounded-lg p-4 focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+
+</div>
+
+<button
+class="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 rounded-lg font-semibold transition duration-300 hover:scale-105">
+
+Send Inquiry
+
+</button>
+
+</form>
+
+</div>
+
+<!-- CONTACT INFO -->
+
+<div class="space-y-6">
+
+<div class="bg-white rounded-3xl shadow-xl p-8 hover:-translate-y-1 transition">
+
+<div class="flex items-center gap-4">
+<i class="fas fa-location-dot text-3xl text-orange-500"></i>
+
+<div>
+<h3 class="font-bold text-xl">Office Address</h3>
+<p class="text-gray-600">
+123 Travel Avenue, Victoria Island, Lagos, Nigeria
+</p>
+</div>
+</div>
+
+</div>
+
+<div class="bg-white rounded-3xl shadow-xl p-8 hover:-translate-y-1 transition">
+
+<div class="flex items-center gap-4">
+<i class="fas fa-phone text-3xl text-blue-600"></i>
+
+<div>
+<h3 class="font-bold text-xl">Phone</h3>
+<p class="text-gray-600">
++234 800 123 4567
+</p>
+</div>
+</div>
+
+</div>
+
+<div class="bg-white rounded-3xl shadow-xl p-8 hover:-translate-y-1 transition">
+
+<div class="flex items-center gap-4">
+<i class="fas fa-envelope text-3xl text-orange-500"></i>
+
+<div>
+<h3 class="font-bold text-xl">Email</h3>
+<p class="text-gray-600">
+info@dreamdestinationtravels.com
+</p>
+</div>
+</div>
+
+</div>
+
+<div class="bg-white rounded-3xl shadow-xl p-8 hover:-translate-y-1 transition">
+
+<div class="flex items-center gap-4">
+<i class="fas fa-clock text-3xl text-blue-600"></i>
+
+<div>
+<h3 class="font-bold text-xl">Business Hours</h3>
+<p class="text-gray-600">
+Monday - Friday: 8:00 AM - 6:00 PM
+</p>
+<p class="text-gray-600">
+Saturday: 9:00 AM - 4:00 PM
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= MAP ================= -->
+
+<section class="py-20 bg-white">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="text-center mb-12">
+<h2 class="text-4xl font-bold text-blue-900">
+Visit Our Office
+</h2>
+<p class="text-gray-600 mt-3">
+Drop by for a personalized travel consultation.
+</p>
+</div>
+
+<div class="rounded-3xl overflow-hidden shadow-2xl">
+
+<iframe
+src="https://maps.google.com/maps?q=Victoria%20Island%20Lagos&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="500"
+style="border:0;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FAQ ================= -->
+
+<section class="py-20 bg-gradient-to-b from-orange-50 to-blue-50">
+
+<div class="max-w-4xl mx-auto px-6">
+
+<h2 class="text-4xl font-bold text-center text-blue-900 mb-12">
+Frequently Asked Questions
+</h2>
+
+<div class="space-y-4">
+
+<div class="faq-item bg-white rounded-xl shadow-lg">
+<button class="faq-btn w-full text-left p-6 font-semibold flex justify-between">
+<span>How does the booking process work?</span>
+<span>+</span>
+</button>
+
+<div class="faq-content px-6 pb-6 text-gray-600">
+Submit your inquiry, receive a customized travel plan,
+confirm your itinerary, and make payment to secure your booking.
+</div>
+</div>
+
+<div class="faq-item bg-white rounded-xl shadow-lg">
+<button class="faq-btn w-full text-left p-6 font-semibold flex justify-between">
+<span>What payment methods do you accept?</span>
+<span>+</span>
+</button>
+
+<div class="faq-content px-6 pb-6 text-gray-600">
+We accept bank transfers, debit cards, credit cards,
+and selected online payment gateways.
+</div>
+</div>
+
+<div class="faq-item bg-white rounded-xl shadow-lg">
+<button class="faq-btn w-full text-left p-6 font-semibold flex justify-between">
+<span>What is your cancellation policy?</span>
+<span>+</span>
+</button>
+
+<div class="faq-content px-6 pb-6 text-gray-600">
+Cancellation policies depend on the package booked.
+Refund eligibility will be outlined in your booking agreement.
+</div>
+</div>
+
+<div class="faq-item bg-white rounded-xl shadow-lg">
+<button class="faq-btn w-full text-left p-6 font-semibold flex justify-between">
+<span>Do you assist with visas?</span>
+<span>+</span>
+</button>
+
+<div class="faq-content px-6 pb-6 text-gray-600">
+Yes, we provide visa consultation and application support
+for selected destinations.
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-slate-900 text-white">
+
+<div class="max-w-7xl mx-auto px-6 py-16">
+
+<div class="grid md:grid-cols-3 gap-10">
+
+<div>
+<h3 class="text-2xl font-bold mb-4">
+Dream Destination Travel & Tours
+</h3>
+
+<p class="text-gray-400">
+Turning dream vacations into unforgettable journeys.
+</p>
+</div>
+
+<div>
+<h4 class="font-semibold mb-4">
+Quick Links
+</h4>
+
+<ul class="space-y-2 text-gray-400">
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a href="destination.html">Destinations</a></li>
+<li><a href="packages.html">Packages</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+
+<div>
+
+<h4 class="font-semibold mb-4">
+Follow Us
+</h4>
+
+<div class="flex gap-5 text-3xl">
+
+<a href="#" class="hover:text-pink-500 transition">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="#" class="hover:text-blue-500 transition">
+<i class="fab fa-facebook"></i>
+</a>
+
+<a href="#" class="hover:text-sky-400 transition">
+<i class="fab fa-twitter"></i>
+</a>
+
+<a href="#" class="hover:text-green-500 transition">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<hr class="border-gray-700 my-8">
+
+<p class="text-center text-gray-400">
+© 2026 Dream Destination Travel and Tours. All Rights Reserved.
+</p>
+
+</div>
+
+</footer>
+
+<!-- FAQ SCRIPT -->
+
+<script>
+const faqButtons = document.querySelectorAll('.faq-btn');
+
+faqButtons.forEach(button => {
+button.addEventListener('click', () => {
+button.parentElement.classList.toggle('active');
+});
+});
+</script>
+
+</body>
+</html>
+```
